@@ -1,0 +1,20 @@
+//this file will generate a Sierpinski triangle fractal and save it in a 2000x2000 bitmap
+[CGF:1]
+
+[ITERATIONS: 250000]
+
+[SIZE: 1000, 1000]
+
+[POINTS]
+    [A: 1, 1000]
+    [B: 500, 1]
+    [C: 1000, 1000]
+[END-POINTS]
+
+[PROPORTIONS]
+    [A: 0.5]
+    [B: 0.5]
+    [C: 0.5]
+[END-PROPORTIONS]
+
+[END-CGF]

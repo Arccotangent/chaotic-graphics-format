@@ -1,0 +1,31 @@
+plugins {
+    id 'com.palantir.graal' version '0.4.0'
+    id 'java'
+}
+
+group 'net.arccotangent'
+
+graal {
+    graalVersion '19.2.0'
+    outputName 'cgf.bin'
+    mainClass 'net.arccotangent.cgf.Main'
+}
+
+targetCompatibility = 1.8
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+jar {
+    manifest {
+        attributes (
+                'Main-Class': 'net.arccotangent.cgf.Main'
+        )
+    }
+}
