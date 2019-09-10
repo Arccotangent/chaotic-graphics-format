@@ -1,0 +1,24 @@
+//square fractal tests, proportions modified to make it more interesting
+[CGF:1]
+
+[ITERATIONS: 2500000]
+
+[SIZE: 1000, 1000]
+
+[POINTS]
+    [A: 1, 1]
+    [B: 1000, 1]
+    [C: 1, 1000]
+    [D: 1000, 1000]
+[END-POINTS]
+
+//proportions of 0.5 create a seemingly uniform point distribution
+//so proportions are slightly biased/offset to make it look a bit more interesting
+[PROPORTIONS]
+    [A: 0.49]
+    [B: 0.49]
+    [C: 0.49]
+    [D: 0.49]
+[END-PROPORTIONS]
+
+[END-CGF]

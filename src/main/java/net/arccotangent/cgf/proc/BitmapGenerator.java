@@ -98,6 +98,11 @@ public class BitmapGenerator {
 			int desiredX = calculateBiasedMidpoint(cursorX, nextPoint.getX(), xIncrease, proportion) - 1;
 			int desiredY = calculateBiasedMidpoint(cursorY, nextPoint.getY(), yIncrease, proportion) - 1;
 
+			if (desiredX < 0 || desiredX >= matrix.getX() || desiredY < 0 || desiredY >= matrix.getY()) {
+				log.w("Invalid point coordinate (" + desiredX + ", " + desiredY + ")! Ignoring this point and continuing.");
+				continue;
+			}
+
 			matrix.setPixel(desiredX, desiredY, shadedPoint);
 			cursorX = desiredX;
 			cursorY = desiredY;

@@ -27,7 +27,7 @@ public class PerfTimer extends Thread {
 				long currentIterationCount = generator.getDoneIterations();
 
 				long iterationsThisPeriod = currentIterationCount - prevIterationCount;
-				log.i("Completed " + currentIterationCount + " of " + totalIterations + " in this period. Running iteration rate is " + iterationsThisPeriod + " iterations/sec.");
+				log.i("Completed " + currentIterationCount + " of " + totalIterations + " in this period. Running iteration rate is " + (iterationsThisPeriod) + " iterations/sec.");
 
 				prevIterationCount = currentIterationCount;
 			}
@@ -45,7 +45,7 @@ public class PerfTimer extends Thread {
 		long endTime = System.currentTimeMillis();
 		long totalTime = endTime - startTime;
 		double avgRate = (double) totalIterations / (double) totalTime;
-		log.i("CGF has taken " + totalTime + "ms to generate your bitmap. The average iteration rate was " + avgRate + " iterations/sec.");
+		log.i("CGF has taken " + totalTime + "ms to generate your bitmap. The average iteration rate was " + (avgRate * 1000) + " iterations/sec.");
 		super.interrupt();
 	}
 }

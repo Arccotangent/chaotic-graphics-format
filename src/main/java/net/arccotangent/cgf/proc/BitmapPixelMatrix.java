@@ -71,6 +71,11 @@ public class BitmapPixelMatrix {
 	}
 
 	void setPixel(int x, int y, int pixel) {
+		if (x < 0 || y < 0 || x > getX() || y > getY()) {
+			log.w("Invalid pixel coordinate (" + x + ", " + y + "). Ignoring.");
+			return;
+		}
+
 		if (getPixel(x, y) != pixel)
 			matrix.get(y).set(x, pixel);
 	}

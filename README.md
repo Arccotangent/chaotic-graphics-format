@@ -136,4 +136,6 @@ So you must use trial and error to choose an iteration count.
 
 These are benchmarks from my own PC.
 
-`samples/sierpinski-triangle.cgf` - About 5300-5400 iterations/sec.
+`samples/sierpinski-triangle.cgf` - About 5.3-5.6 million iterations/sec.
+
+Most of the time, my PC gets at least 4.5 million iterations/sec.

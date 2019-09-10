@@ -1,0 +1,26 @@
+//regular hexagon fractal test
+[CGF:1]
+
+[ITERATIONS: 2500000]
+
+[SIZE: 1000, 1000]
+
+[POINTS]
+    [A: 250, 933]
+    [B: 750, 933]
+    [C: 1, 500]
+    [D: 750, 67]
+    [E: 250, 67]
+    [F: 1000, 500]
+[END-POINTS]
+
+[PROPORTIONS]
+    [A: 0.5]
+    [B: 0.5]
+    [C: 0.5]
+    [D: 0.5]
+    [E: 0.5]
+    [F: 0.5]
+[END-PROPORTIONS]
+
+[END-CGF]

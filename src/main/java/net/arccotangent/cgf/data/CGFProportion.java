@@ -26,6 +26,10 @@ public class CGFProportion {
 	public CGFProportion(String targetPoint, double proportion) {
 		this.targetPoint = targetPoint;
 		this.proportion = proportion;
+
+		if (this.proportion < 0 || this.proportion > 1) {
+			throw new IllegalArgumentException("INVALID CGF PROPORTION: Proportion must be between 0 and 1.");
+		}
 	}
 
 	public String getTargetPoint() {
